@@ -1,5 +1,5 @@
 mod commands;
-use commands::default::{read, write};
+use commands::default::{adjust_initial_window_size, read, resize_window, write};
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 /// Runs the Tauri application.
@@ -19,7 +19,12 @@ pub fn run() {
             }
             Ok(())
         })
-        .invoke_handler(tauri::generate_handler![read, write])
+        .invoke_handler(tauri::generate_handler![
+            read,
+            write,
+            resize_window,
+            adjust_initial_window_size
+        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
