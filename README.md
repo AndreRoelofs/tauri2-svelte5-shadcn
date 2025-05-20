@@ -1,3 +1,9 @@
+# FORK PURPOSE
+
+THIS FORK WAS CREATED TO TEST OUT DYNAMICALLY RESIZABLE WINDOWS IN TAURI
+
+Here you can see the example how tauri always fits itself to the content height.
+
 # Tauri 2 Svelte 5 Shadcn
 
 Simple boilerplate for Tauri 2 with Svelte 5 (and shadcn-svelte).
